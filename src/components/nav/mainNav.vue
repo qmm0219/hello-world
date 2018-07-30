@@ -14,7 +14,7 @@
         name: "mainNav",
         data() {
             return {
-              navIndex:0,
+              navIndex:1,
               navList:[
                 {path:"/home",pathName:"首页"},
                 {path:"/tab",pathName:"tab"},
