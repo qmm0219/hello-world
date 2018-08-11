@@ -1,10 +1,10 @@
 <template>
-    <div>我的</div>
+    $END$
 </template>
 
 <script>
     export default {
-        name: "my",
+        name: "download",
         data() {
             return {}
         },
