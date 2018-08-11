@@ -39,6 +39,8 @@
     }
     .view{
       height:calc(100% - 45px);
+      padding:10px;
+      box-sizing: border-box;
       border:1px solid #ccc;
     }
 

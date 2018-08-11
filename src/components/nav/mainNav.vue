@@ -1,7 +1,7 @@
 <template>
   <div class="nav_container">
     <ul class="nav_ul">
-      <li :class="{'active':navIndex == index}" v-for="(item,index) in navList" :key="item.path" @click="navChange(index)">
+      <li :class="{'active':navIndex == index}" v-for="(item,index) in navList" :key="item.path" @click="navChange(index,item.path)">
         <router-link :to="item.path">{{item.pathName}}</router-link>
       </li>
 
@@ -14,28 +14,33 @@
         name: "mainNav",
         data() {
             return {
-              navIndex:1,
+              navIndex:0,
               navList:[
                 {path:"/home",pathName:"首页"},
                 {path:"/tab",pathName:"tab"},
                 {path:"/demo",pathName:"demo"},
                 {path:"/detail",pathName:"详细"},
                 {path:"/qrCode",pathName:"二维码"},
-                {path:"/my",pathName:"我的"}
+                {path:"/my",pathName:"我的"},
+                {path:"/print",pathName:"print/excel"},
+                {path:"/download",pathName:"图片下载"}
 
               ]
             }
         },
         created() {
-
+          // this.$router.push("/home");
+          let navIndex = sessionStorage.getItem("currentIndex");
+          this.navIndex = navIndex;
         },
         mounted() {
 
         },
         methods: {
           //    导航切换
-          navChange(index){
+          navChange(index,currentPath){
             this.navIndex = index;
+            sessionStorage.setItem("currentIndex",index);
           }
         }
     }

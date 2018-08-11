@@ -7,7 +7,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return {
+
+    }
+  },
+  created(){
+
+
+  }
+
 }
 </script>
 
@@ -23,6 +33,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /*text-align: center;*/
   color: #2c3e50;
+  font-size:14px;
   /*margin-top: 60px;*/
 }
 </style>

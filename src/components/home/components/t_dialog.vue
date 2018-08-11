@@ -1,11 +1,13 @@
 <template>
-  <el-dialog :visible.sync="currentShow"></el-dialog>
+  <el-dialog title="弹窗" :visible.sync="$store.state.show"></el-dialog>
+
+
 </template>
 
 <script>
     export default {
-        name: "dialog",
-        props:["show"],
+        name: "t_dialog",
+        // props:["show"],
         data() {
             return {}
         },
@@ -16,14 +18,14 @@
 
         },
         computed:{
-            currentShow:{
-              get(){
-                return this.show
-              },
-              set(val){
-                this.$emit("update:show",val)
-              }
-            }
+            // currentShow:{
+            //   get(){
+            //     return this.show
+            //   },
+            //   set(val){
+            //     this.$emit("update:show",val)
+            //   }
+            // }
         },
         methods: {}
     }
