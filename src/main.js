@@ -7,6 +7,9 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store/store'
 import axios from 'axios'
+//引入pdf文件(全局引入，直接在需要打印的页面调用getPdf()方法即可)
+//import htmlToPdf from '@/assets/js/htmlToPdf'
+//Vue.use(htmlToPdf)
 
 Vue.use(ElementUI)
 Vue.prototype.$http= axios

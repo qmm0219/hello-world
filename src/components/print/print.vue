@@ -4,8 +4,10 @@
     <div class="header_title">
       <el-button type="primary" @click="printBtn1()">方法一</el-button>
       <el-button type="primary" @click="printBtn2()">方法二</el-button>
+      <el-button type="primary" @click="printBtn3()">打印pdf</el-button>
 			<el-button type="primary" @click="exportExcel('tableId')">导出excel</el-button>
 			<a download="商品价格表" id="excelOut" href="#">table导出Excel</a>
+			<el-button type="primary" @click="tableToExcel('tableId','水果价格表')">导出excel2</el-button>
 			
     </div>
 
@@ -63,7 +65,7 @@
     },
     mounted() {
     	this.$nextTick(function(){
-    		this.tableToExcel('tableId', '下载模板')
+    		//this.tableToExcel('tableId', '下载模板')
     	})
 			
     },
@@ -106,6 +108,10 @@
 
         // wind.print();
         //对方url返回的所有内容都会被打印，，，如果知道需要打印指定内容的ID，可以先将页面获取到，然后通过一、中的方式打印。
+      },
+      //打印pdf
+      printBtn3(){
+      	
       },
       //后台返回数据导出excel
       exportExcel(tableid){
@@ -165,7 +171,8 @@
             '</head><body ><table class="excelTable">{table}</table></body></html>';
         if (!tableid.nodeType) tableid = document.getElementById(tableid);
         var ctx = {worksheet: sheetName || 'Worksheet', table: tableid.innerHTML};
-        document.getElementById("excelOut").href = uri + base64(format(template, ctx));
+        //document.getElementById("excelOut").href = uri + base64(format(template, ctx));
+       	window.location.href = uri + base64(format(template, ctx));
       },
      
     }

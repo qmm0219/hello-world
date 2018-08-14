@@ -23,6 +23,7 @@
                 {path:"/qrCode",pathName:"二维码"},
                 {path:"/my",pathName:"我的"},
                 {path:"/print",pathName:"print/excel"},
+                {path:"/pdf",pathName:"打印pdf"},
                 {path:"/download",pathName:"图片下载"}
 
               ]

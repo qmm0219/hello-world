@@ -30,6 +30,7 @@ const QrCode = () => import("@/components/qrCode/qrCode");
 const My = () => import("@/components/my/myHome");
 const Print = () => import("@/components/print/print")
 const Download = () => import("@/components/downloadImg/download")
+const Pdf = () => import("@/components/print/pdf")
 //
 
 Vue.use(Router)
@@ -82,6 +83,11 @@ export default new Router({
           path: '/download',
           name: 'download',
           component: Download
+        },
+        {
+          path: '/pdf',
+          name: 'pdf',
+          component: Pdf
         },
       ]
     },

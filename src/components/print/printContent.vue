@@ -18,17 +18,17 @@
             <tr>
               <td>香蕉</td>
               <td>5.00</td>
-              <td>50个</td>
+              <td>60个</td>
             </tr>
             <tr>
               <td>橘子</td>
               <td>5.00</td>
-              <td>50个</td>
+              <td>70个</td>
             </tr>
             <tr class="alt">
               <td>芒果</td>
               <td>5.00</td>
-              <td>50个</td>
+              <td>80个</td>
             </tr>
           </tbody>
 
